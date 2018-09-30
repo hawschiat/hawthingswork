@@ -1,0 +1,25 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hawschiat/mysite.git"
+  },
+  "author": "SC Haw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hawschiat/mysite/issues"
+  },
+  "homepage": "https://github.com/hawschiat/mysite#readme"
+}
