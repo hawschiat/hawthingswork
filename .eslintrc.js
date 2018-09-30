@@ -2,30 +2,30 @@ module.exports = {
     "env": {
         "browser": true,
         "commonjs": true,
-        "es6": true,
-        "node": true
+        "es6": true
     },
-    "extends": 'plugin:vue/essential', //"eslint:recommended",
-    "parser": "babel-eslint",
+    "extends": ["plugin:vue/strongly-recommended"],
     "parserOptions": {
+		"parser": "babel-eslint",
         "ecmaVersion": 2018,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": false
-        }
+        "sourceType": "module"
     },
     "rules": {
         "indent": [
             "error",
-            "tab"
+            4
         ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
+        "linebreak-style": 0,
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "vue/max-attributes-per-line": [2, {
+            "singleline": 4,
+            "multiline": {
+              "max": 1,
+              "allowFirstLine": false
+            }
+        }]
     }
-};
+}
