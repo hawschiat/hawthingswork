@@ -6,10 +6,9 @@ module.exports = {
     },
     "extends": ["plugin:vue/strongly-recommended"],
     "parserOptions": {
-		"parser": "babel-eslint",
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+		"parser": "babel-eslint"
     },
+    "plugins": ["vue"],
     "rules": {
         "indent": [
             "error",
