@@ -1,7 +1,17 @@
 import Vue from 'vue';
-import App from './pages/App.vue';
+import VueRouter from "vue-router";
+import router from "./routes.js";
+import animatedBrand from './components/animatedBrand';
 import './style/app.scss';
-new Vue({
+import "es6-promise/auto";
+
+Vue.use(VueRouter);
+Vue.component('animated-brand', animatedBrand);
+
+window.app = new Vue({
     el: '#app',
-    render: h => h(App)
+    data: {
+
+    },
+    router
 });

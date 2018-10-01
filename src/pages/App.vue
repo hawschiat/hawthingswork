@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h1>Hello World!</h1>
-  </div>
+    <section id="section-1" class="page-section">
+        Hello World!
+    </section>
 </template>
 
 <script>
