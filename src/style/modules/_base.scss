@@ -1,14 +1,33 @@
 // Base styles
 //_base.scss
+$theme-color: #2F0033;
 
 .main-header {
-    background-color: aquamarine;
-    height: 200px;
-}
-.jumbotron {
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    background-color: $theme-color;
+    height: 90px;
     padding: 10px 30px;
-    background-color: beige;
+
+    .brand-wrapper {
+        width: 170px;
+    }
+
+    .menu-wrapper {
+        display: flex;
+        align-content: center;
+    }
+}
+.page-section {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding: 20px 30px;
+    overflow-x: hidden;
+
+    &#section-1 {
+        color: #ffffff;
+        background-color: #0066DA;
+    }
 }
