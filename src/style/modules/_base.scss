@@ -2,10 +2,10 @@
 //_base.scss
 $theme-color: #242582;
 $header-height: 110px;
-$header-extended-height: 40vh;
+$header-extended-height: 55vh;
 
-@media (min-width: 500px) {
-    $header-extended-height: 55vh;
+@media (max-width: 500px) {
+    $header-extended-height: 30vh;
 }
 
 .main-header {
@@ -137,7 +137,7 @@ $header-extended-height: 40vh;
 
             #adjusted-main {
                 margin-top: $header-extended-height;
-                padding: 2em;
+                padding-top: 20px;
                 span {
                     display: block;
                     &#firstLine {
