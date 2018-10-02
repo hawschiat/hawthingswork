@@ -13,26 +13,31 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="dist/style.css">
     <title>Haw things work</title>
 </head>
 <body>
-    <div id="app" class="wrapper">
-        <header class="main-header">
+    <div id="app" class="wrapper" :style="{backgroundColor: bgColor}">
+        <header class="main-header" :class="{'on-main-page': onMainPage}">
             <div id="left-menu" class="menu-wrapper">
-                <span>Menu-left</span>
+                <scroller-link to="#about-top">About Me</scroller-link>
+                <scroller-link to="#experience-top">My Experience</scroller-link>
             </div>
             <div class="brand-wrapper">
-                <animated-brand></animated-brand>
+                <scroller-link to="#welcome-top">
+                    <brand-intro>
+                </scroller-link>
             </div>
             <div id="right-menu" class="menu-wrapper">
-                <span>Menu-right</span>
+                <scroller-link to="#project">Project</scroller-link>
+                <scroller-link to="#contact">Contact</scroller-link>
             </div>
         </header>
         <main id="mainView">
-            <transition>
-                <router-view></router-view>
-            </transition>
+            <welcome-section></welcome-section>
+            <about-section></about-section>
+            <experience-section></experience-section>
         </main>
     </div>
     <script src="dist/chunks/vendor.js"></script>

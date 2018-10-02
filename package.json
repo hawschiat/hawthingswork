@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "animejs": "^2.2.0",
+    "smoothscroll-polyfill": "^0.4.3",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.2",
     "vue-router": "^3.0.1",

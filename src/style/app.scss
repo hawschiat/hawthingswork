@@ -13,6 +13,7 @@ html,body {
     display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
     grid-gap: 0;
+    transition: background-color .3s ease;
     
     > * {
         grid-column: col-start / span 12;

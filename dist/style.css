@@ -2,25 +2,156 @@
 .main-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #ffffff;
-  background-color: #2F0033;
-  height: 90px;
-  padding: 10px 30px; }
+  height: 110px;
+  padding: 10px;
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 9999;
+  transition: all .3s ease; }
+  .main-header.on-main-page {
+    height: 50vh !important; }
+    .main-header.on-main-page .brand-wrapper {
+      margin: 20px 0;
+      width: auto !important;
+      flex-grow: 9; }
+    .main-header.on-main-page .menu-wrapper {
+      flex-grow: 6;
+      font-size: 1.2em; }
   .main-header .brand-wrapper {
-    width: 170px; }
+    width: 170px;
+    box-sizing: border-box; }
+    .main-header .brand-wrapper > .scroller-link {
+      cursor: pointer; }
   .main-header .menu-wrapper {
     display: flex;
-    align-content: center; }
+    flex-grow: 4;
+    justify-content: space-evenly;
+    align-items: center; }
+    .main-header .menu-wrapper > .scroller-link {
+      cursor: pointer;
+      display: inline;
+      position: relative; }
+      .main-header .menu-wrapper > .scroller-link:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        width: 0;
+        bottom: -5px;
+        background: #ffffff;
+        height: 4px;
+        transition-property: width;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out; }
+      .main-header .menu-wrapper > .scroller-link:hover:after, .main-header .menu-wrapper > .scroller-link:focus:after, .main-header .menu-wrapper > .scroller-link:active:after {
+        left: 0;
+        right: auto;
+        width: 100%; }
 
-.page-section {
-  width: 100%;
-  height: auto;
-  min-height: 400px;
-  padding: 20px 30px;
-  overflow-x: hidden; }
-  .page-section#section-1 {
-    color: #ffffff;
-    background-color: #0066DA; }
+#mainView {
+  display: flex;
+  flex-direction: column; }
+  #mainView > .page-section {
+    height: auto;
+    min-height: 400px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    position: relative; }
+    #mainView > .page-section .link-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      bottom: 40px; }
+      #mainView > .page-section .link-container a {
+        margin: 0 20px;
+        text-decoration: none; }
+        #mainView > .page-section .link-container a > span {
+          color: #ffffff;
+          font-size: 36px; }
+    #mainView > .page-section .buffer {
+      height: 110px; }
+    #mainView > .page-section .top-anchor {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #mainView > .page-section#welcome {
+      color: #ffffff;
+      height: 100vh; }
+      #mainView > .page-section#welcome #adjusted-main {
+        margin-top: 50vh;
+        padding: 50px; }
+        #mainView > .page-section#welcome #adjusted-main span {
+          display: block; }
+          #mainView > .page-section#welcome #adjusted-main span#firstLine {
+            font-size: 2em;
+            text-align: center; }
+          #mainView > .page-section#welcome #adjusted-main span#secondLine {
+            font-size: 1.5em;
+            text-align: center; }
+          #mainView > .page-section#welcome #adjusted-main span#thirdLine {
+            font-size: 1.5em;
+            text-align: center; }
+        #mainView > .page-section#welcome #adjusted-main > #secondLineContainer {
+          display: flex;
+          width: 500px;
+          padding: 30px 0;
+          margin: 0 auto;
+          justify-content: space-evenly; }
+    #mainView > .page-section#about {
+      color: #ffffff;
+      min-height: 100vh; }
+      #mainView > .page-section#about > #about-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; }
+        #mainView > .page-section#about > #about-content #content-text {
+          display: inline-block;
+          padding: 20px 40px;
+          background-color: rgba(0, 0, 0, 0.3);
+          border-radius: 20px;
+          width: 70%; }
+          #mainView > .page-section#about > #about-content #content-text p {
+            font-size: 1.2em;
+            line-height: 1.5; }
+    #mainView > .page-section#experience {
+      color: #ffffff;
+      height: 100vh;
+      overflow: hidden; }
+      #mainView > .page-section#experience .list-container {
+        display: flex;
+        width: 70%; }
+      #mainView > .page-section#experience .download-corner {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        bottom: 10px;
+        right: 10px; }
+        #mainView > .page-section#experience .download-corner #download-text {
+          margin-right: 20px; }
+        #mainView > .page-section#experience .download-corner #download-icon {
+          height: 100px;
+          width: 100px;
+          background-color: #7C0000;
+          border-radius: 50%;
+          display: block;
+          transition: all .5s ease;
+          color: #ffffff;
+          font-size: 42px; }
+          #mainView > .page-section#experience .download-corner #download-icon:hover, #mainView > .page-section#experience .download-corner #download-icon:focus, #mainView > .page-section#experience .download-corner #download-icon:active {
+            background-color: #B90000; }
+          #mainView > .page-section#experience .download-corner #download-icon > .icon-wrapper {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center; }
 
 html, body {
   width: 100%;
@@ -33,7 +164,8 @@ html, body {
   overflow-x: hidden;
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-gap: 0; }
+  grid-gap: 0;
+  transition: background-color .3s ease; }
   .wrapper > * {
     grid-column: col-start / span 12; }
   @media (min-width: 500px) {
