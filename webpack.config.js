@@ -75,7 +75,23 @@ var config = {
 
 module.exports = (env, argv) => {
 	if (argv.mode === 'production') {
-		config.optimization.push({
+		config.optimization = {
+			splitChunks: {
+				cacheGroups: {
+					commons: {
+						chunks: "initial",
+						minChunks: 2,
+						maxInitialRequests: 5, // The default limit is too small to showcase the effect
+					},
+					vendor: {
+						test: /node_modules/,
+						chunks: "initial",
+						name: "vendor",
+						priority: 10,
+						enforce: true
+					}
+				}
+			},
 			minimizer: [
 				new UglifyJsPlugin({
 					cache: true,
@@ -84,7 +100,7 @@ module.exports = (env, argv) => {
 				}),
 				new OptimizeCSSAssetsPlugin({})
 			]
-		})
+		}
 	}
 	
 	return config;

@@ -2,7 +2,7 @@
 //_base.scss
 $theme-color: #242582;
 $header-height: 110px;
-$header-extended-height: 50vh;
+$header-extended-height: 60vh;
 
 .main-header {
     display: flex;
@@ -23,11 +23,16 @@ $header-extended-height: 50vh;
         .brand-wrapper {
             margin: 20px 0;
             width: auto !important;
-            flex-grow: 9;
+            flex-grow: 3;
         }
         .menu-wrapper {
-            flex-grow: 6;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            width: 15%;
             font-size: 1.2em;
+            >.scroller-link {
+                margin-bottom: 10px;
+            }
         }
     }
 
@@ -41,9 +46,10 @@ $header-extended-height: 50vh;
 
     .menu-wrapper {
         display: flex;
-        flex-grow: 4;
+        flex-grow: 2;
         justify-content: space-evenly;
         align-items: center;
+        font-size: 1em;
 
         >.scroller-link {
             cursor: pointer;
@@ -127,7 +133,7 @@ $header-extended-height: 50vh;
 
             #adjusted-main {
                 margin-top: $header-extended-height;
-                padding: 50px;
+                padding: 2em;
                 span {
                     display: block;
                     &#firstLine {
@@ -137,6 +143,7 @@ $header-extended-height: 50vh;
                     &#secondLine {
                         font-size: 1.5em;
                         text-align: center;
+                        margin-right: 10px;
                     }
                     &#thirdLine {
                         font-size: 1.5em;
@@ -145,10 +152,11 @@ $header-extended-height: 50vh;
                 }
                 >#secondLineContainer {
                     display: flex;
-                    width: 500px;
+                    flex-wrap: wrap;
+                    width: 80%;
                     padding: 30px 0;
                     margin: 0 auto;
-                    justify-content: space-evenly;
+                    justify-content: center;
                 }
             }
         }
@@ -235,7 +243,7 @@ $header-extended-height: 50vh;
                 transition: opacity .3s ease;
                 #download-text {
                     margin-right: 20px;
-                    text-shadow: 0px 1px 10px rgba(150, 150, 150, 1);
+                    text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
                 }
                 #download-icon {
                     height: 100px;
