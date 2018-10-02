@@ -63,6 +63,8 @@ $header-extended-height: 55vh;
             cursor: pointer;
             display: inline;
             position: relative;
+            text-align: center;
+            flex-basis: 6em;
 
             &:after {
                 content: "";
