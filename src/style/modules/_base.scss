@@ -2,7 +2,11 @@
 //_base.scss
 $theme-color: #242582;
 $header-height: 110px;
-$header-extended-height: 55vh;
+$header-extended-height: 50vh;
+
+@media (min-width: 500px) {
+    $header-extended-height: 55vh;
+}
 
 .main-header {
     display: flex;
@@ -105,7 +109,7 @@ $header-extended-height: 55vh;
             justify-content: center;
             position: absolute;
             left: 0;
-            bottom: 30px;
+            bottom: 40px;
             a {
                 margin: 0 20px;
                 text-decoration: none;
@@ -129,8 +133,7 @@ $header-extended-height: 55vh;
         &#welcome {
             color: #ffffff;
             //background-color: $theme-color;
-            min-height: 100vh;
-            padding-bottom: 10px;
+            height: 100vh;
 
             #adjusted-main {
                 margin-top: $header-extended-height;
