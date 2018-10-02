@@ -12,9 +12,19 @@ $header-extended-height: 55vh;
             height: $header-extended-height !important;
         }
     }
-
     .menu-wrapper {
         font-size: 0.8em !important;
+    }
+
+    #welcome {
+        color: #ffffff;
+        //background-color: $theme-color;
+        height: 100vh;
+
+        #adjusted-main {
+            margin-top: $header-extended-height;
+            padding-top: 20px;
+        }
     }
 }
 
