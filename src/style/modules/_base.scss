@@ -5,7 +5,7 @@ $header-height: 110px;
 $header-extended-height: 55vh;
 
 @media only screen and (max-width: 640px) {
-    $header-extended-height: 20vh;
+    $header-extended-height: 10vh;
 
     .main-header {
         &.on-main-page {
