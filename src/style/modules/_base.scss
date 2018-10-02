@@ -86,6 +86,13 @@ $header-extended-height: 50vh;
         box-sizing: border-box;
         position: relative;
 
+        .section-title {
+            display: block;
+            text-align: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid white;
+        }
+
         .link-container {
             display: flex;
             width: 100%;
@@ -153,10 +160,13 @@ $header-extended-height: 50vh;
 
             >#about-content {
                 display: flex;
+                padding-top: $header-height;
+                box-sizing: border-box;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                height: 100vh;
+                min-height: 100vh;
+                padding-bottom: 10vh;
 
                 #content-text {
                     display: inline-block;
@@ -172,24 +182,60 @@ $header-extended-height: 50vh;
             }
         }
 
+        .list-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 10px;
+            width: 100%;
+
+            .experience-list-items {
+                .item-title {
+                    font-weight: bold;
+                    font-size: 1.5em;
+                    margin-bottom: 3px;
+                }
+                .item-date {
+                    font-size: 1em;
+                    text-transform: capitalize;
+                    font-style: italic;
+                    margin-bottom: 10px;
+                }
+                width: 70%;
+                font-size: 1em;
+                line-height: 1.5;
+                padding: 20px 40px;
+                background-color: rgba(0,0,0,0.3);
+                border-radius: 20px;
+                margin-bottom: 30px;
+                a {
+                    color: #ffffff;
+                    &.visited {
+                        color: #D2D2D2;
+                    }
+                }
+            }
+        }
+
         &#experience {
             color: #ffffff;
-            height: 100vh;
-            overflow: hidden;
-
-            .list-container {
-                display: flex;
-                width: 70%;
-            }
+            min-height: 100vh;
+            padding-bottom: 20vh;
 
             .download-corner {
+                &.hidden {
+                    opacity: 0 !important;
+                }
                 display: flex;
-                position: absolute;
+                position: fixed;
                 align-items: center;
                 bottom: 10px;
                 right: 10px;
+                opacity: 1;
+                transition: opacity .3s ease;
                 #download-text {
                     margin-right: 20px;
+                    text-shadow: 0px 1px 10px rgba(150, 150, 150, 1);
                 }
                 #download-icon {
                     height: 100px;
@@ -213,6 +259,32 @@ $header-extended-height: 50vh;
                         justify-content: center;
                         align-items: center;
                     }
+                }
+            }
+        }
+
+        &#project {
+            color: #ffffff;
+            min-height: 100vh;
+            padding-bottom: 20vh;
+        }
+
+        &#contact {
+            color: #ffffff;
+            height: 100vh;
+
+            >#contact-wrapper {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                height: 100%;
+                h1 {
+                    font-size: 2em;
+                }
+                .link-container {
+                    font-size: 3em;
+                    position: static;
                 }
             }
         }

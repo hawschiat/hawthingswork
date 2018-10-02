@@ -4,9 +4,12 @@ import CustomSection from './components/customSection';
 import WelcomeSection from './pages/WelcomeSection';
 import AboutSection from './pages/AboutSection';
 import ExperienceSection from './pages/ExperienceSection';
+import ProjectSection from './pages/ProjectSection';
+import ContactSection from './pages/ContactSection';
 import BrandIntro from './components/BrandIntro';
 import AnimatedBrand from './components/animatedBrand';
 import ScrollerLink from './components/scrollerLink';
+import ListComponent from './components/ListComponent';
 import smoothscroll from 'smoothscroll-polyfill';
 import './style/app.scss';
 import "es6-promise/auto";
@@ -19,10 +22,13 @@ Vue.component('logo', Logo);
 Vue.component('brand-intro', BrandIntro);
 Vue.component('animated-brand', AnimatedBrand);
 Vue.component('scroller-link', ScrollerLink);
+Vue.component('list-component', ListComponent);
 Vue.component('custom-section', CustomSection);
 Vue.component('welcome-section', WelcomeSection);
 Vue.component('about-section', AboutSection);
 Vue.component('experience-section', ExperienceSection);
+Vue.component('project-section', ProjectSection);
+Vue.component('contact-section', ContactSection);
 
 window.app = new Vue({
     el: '#app',

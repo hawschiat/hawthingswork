@@ -20,7 +20,7 @@
                 </span>
             </div>
 
-            <div class="link-container">
+            <div id="welcome-links" class="link-container">
                 <a href="https://www.linkedin.com/in/haw-seng-chiat/"><span class="fab fa-linkedin" /></a>
                 <a href="https://github.com/hawschiat"><span class="fab fa-github" /></a>
                 <a href="https://www.facebook.com/haw.sengchiat"><span class="fab fa-facebook" /></a>
@@ -64,7 +64,7 @@ export default {
                 delay: 4000
             }),
             linkContainer = anime({
-                targets: '.link-container',
+                targets: '#welcome-links',
                 trasnlateY: [200,0],
                 opacity: [0,1],
                 duration: 1000,

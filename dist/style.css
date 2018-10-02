@@ -60,6 +60,11 @@
     padding: 20px 30px;
     box-sizing: border-box;
     position: relative; }
+    #mainView > .page-section .section-title {
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+      border-bottom: 2px solid white; }
     #mainView > .page-section .link-container {
       display: flex;
       width: 100%;
@@ -107,10 +112,13 @@
       min-height: 100vh; }
       #mainView > .page-section#about > #about-content {
         display: flex;
+        padding-top: 110px;
+        box-sizing: border-box;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh; }
+        min-height: 100vh;
+        padding-bottom: 10vh; }
         #mainView > .page-section#about > #about-content #content-text {
           display: inline-block;
           padding: 20px 40px;
@@ -120,21 +128,50 @@
           #mainView > .page-section#about > #about-content #content-text p {
             font-size: 1.2em;
             line-height: 1.5; }
+    #mainView > .page-section .list-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 10px;
+      width: 100%; }
+      #mainView > .page-section .list-container .experience-list-items {
+        width: 70%;
+        font-size: 1em;
+        line-height: 1.5;
+        padding: 20px 40px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        margin-bottom: 30px; }
+        #mainView > .page-section .list-container .experience-list-items .item-title {
+          font-weight: bold;
+          font-size: 1.5em;
+          margin-bottom: 3px; }
+        #mainView > .page-section .list-container .experience-list-items .item-date {
+          font-size: 1em;
+          text-transform: capitalize;
+          font-style: italic;
+          margin-bottom: 10px; }
+        #mainView > .page-section .list-container .experience-list-items a {
+          color: #ffffff; }
+          #mainView > .page-section .list-container .experience-list-items a.visited {
+            color: #D2D2D2; }
     #mainView > .page-section#experience {
       color: #ffffff;
-      height: 100vh;
-      overflow: hidden; }
-      #mainView > .page-section#experience .list-container {
-        display: flex;
-        width: 70%; }
+      min-height: 100vh;
+      padding-bottom: 20vh; }
       #mainView > .page-section#experience .download-corner {
         display: flex;
-        position: absolute;
+        position: fixed;
         align-items: center;
         bottom: 10px;
-        right: 10px; }
+        right: 10px;
+        opacity: 1;
+        transition: opacity .3s ease; }
+        #mainView > .page-section#experience .download-corner.hidden {
+          opacity: 0 !important; }
         #mainView > .page-section#experience .download-corner #download-text {
-          margin-right: 20px; }
+          margin-right: 20px;
+          text-shadow: 0px 1px 10px #969696; }
         #mainView > .page-section#experience .download-corner #download-icon {
           height: 100px;
           width: 100px;
@@ -152,6 +189,24 @@
             height: 100%;
             justify-content: center;
             align-items: center; }
+    #mainView > .page-section#project {
+      color: #ffffff;
+      min-height: 100vh;
+      padding-bottom: 20vh; }
+    #mainView > .page-section#contact {
+      color: #ffffff;
+      height: 100vh; }
+      #mainView > .page-section#contact > #contact-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%; }
+        #mainView > .page-section#contact > #contact-wrapper h1 {
+          font-size: 2em; }
+        #mainView > .page-section#contact > #contact-wrapper .link-container {
+          font-size: 3em;
+          position: static; }
 
 html, body {
   width: 100%;

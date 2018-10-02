@@ -1,7 +1,8 @@
 <template>
-    <custom-section background-color="#915A0A" :index="1" id="about" class="page-section">
+    <custom-section background-color="#449B00" :index="1" id="about" class="page-section">
         <a class="top-anchor" id="about-top" tabindex="0" />
         <div id="about-content">
+            <h1 class="section-title">About Me</h1>
             <div id="content-text">
                 <p>
                     I am a student majoring in <strong>Computer Science</strong> and <strong>Linguistics</strong> in <i>McGill University</i>. I started programming in high school, using PHP to create some web applications that utilised MySQL database. Ever since I started studying here, I have had the chance to experiment with several other languages, tools and applications.
