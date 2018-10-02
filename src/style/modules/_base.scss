@@ -7,6 +7,12 @@ $header-extended-height: 55vh;
 @media only screen and (max-width: 640px) {
     $header-extended-height: 20vh;
 
+    .main-header {
+        &.on-main-page {
+            height: $header-extended-height !important;
+        }
+    }
+
     .menu-wrapper {
         font-size: 0.8em !important;
     }
