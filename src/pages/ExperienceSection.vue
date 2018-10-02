@@ -29,7 +29,7 @@
         </div>
         <div class="download-corner" :class="{'hidden': isHidden}">
             <span id="download-text">Prefer the PDF version? Click here! <span class="fas fa-hand-point-right" /></span>
-            <a href="/assets/Seng-Chiat-Haw-CV.pdf" target="_blank">
+            <a href="https://drive.google.com/file/d/18eXWpU8dRdCxg2zcTM17WGpINpDcUpwx/view?usp=sharing" target="_blank">
                 <div id="download-icon">
                     <div class="icon-wrapper"><i class="fas fa-file-pdf" /></div>
                 </div>
