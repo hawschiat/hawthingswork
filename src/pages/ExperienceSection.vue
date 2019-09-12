@@ -4,14 +4,14 @@
         <div class="buffer" />
         <div class="list-container">
             <h1 class="section-title">My Experience</h1>
-            <list-component title="Lead Developer - Basilisk Inc, Montreal" date="May 2018 - Present">
-                Basilisk is an online practice-question bank. As lead developer, I am responsible for the implementation of any technology that may improve the web application and its overall user experience.<br>
-                During the first four months of this position, my job/achievement includes: <br>
-                • Set up a test server environment on Amazon Web Service (Elastic Beanstalk + Amazon RDS)<br>
-                • Further developed an educational web app using Yii2 Framework (PHP) and JavaScript<br>
-                • Developed a quiz and user management interface for the administration page<br>
-                • Developed a commission system and ticketing system<br>
-                • Fixed some existing bugs and improved the UI responsiveness
+            <list-component title="Lead Developer - Neverguess.ca, Montreal" date="May 2018 - Present">
+                • Written an educational web application from scratch, using VueJS as frontend and Yii2 (PHP) as backend (RESTful application).<br>
+                • Designed the backend of the software using various AWS solutions. (Cognito, DynamoDB, Lambda, S3, etc.)<br>
+                • Implemented a continuous delivery pipeline using AWS CodePipeline.<br>
+                • Containerized the application using Docker and AWS Fargate.<br>
+                • Written a DOCX parser using Python to allow users to import quiz questions easily.<br>
+                • Programmed a quiz builder with the ability to add questions, manage images, etc. The images are processed by a Python script on Lambda to store the file based on the current date.<br>
+                • Programmed a quiz exporter that sources the questions from the database, shuffles them and exports as LaTEX-formatted exam papers.<br>
             </list-component>
             <list-component 
                 title="Webmaster - Arts Undergraduate Society of McGill University (AUS), Montreal" 
