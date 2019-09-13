@@ -2,7 +2,7 @@
 //_base.scss
 $theme-color: #242582;
 $header-height: 110px;
-$header-extended-height: 55vh;
+$header-extended-height: 50vh;
 
 @media only screen and (max-width: 640px) {
     $header-extended-height: 10vh;
@@ -13,7 +13,18 @@ $header-extended-height: 55vh;
         }
     }
     .menu-wrapper {
-        font-size: 0.8em !important;
+        font-size: 16px;
+
+        >.scroller-link:first-child {
+            margin-bottom: 20px;
+        }
+
+        &#left {
+            margin-right: 12px;
+        }
+        &#right {
+            margin-left: 12px;
+        }
     }
 
     #welcome {
@@ -33,7 +44,7 @@ $header-extended-height: 55vh;
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
-    //background-color: $theme-color;
+    background-color: rgba(0, 0, 0, 0.7);
     height: $header-height;
     padding: 10px;
     position: fixed;
@@ -44,15 +55,15 @@ $header-extended-height: 55vh;
 
     &.on-main-page {
         height: $header-extended-height !important;
+        background-color: transparent;
         .brand-wrapper {
-            margin: 20px 0;
+            margin: 30px 0;
             width: auto !important;
-            flex-grow: 3;
+            flex-grow: 2;
         }
         .menu-wrapper {
             flex-grow: 1;
-            width: 15%;
-            font-size: 1.2em;
+            width: 30%;
             >.scroller-link {
                 margin-bottom: 10px;
             }
@@ -61,9 +72,17 @@ $header-extended-height: 55vh;
 
     .brand-wrapper {
         width: 170px;
+        height: 100%;
         box-sizing: border-box;
-        >.scroller-link {
-            cursor: pointer;
+        display: flex;
+        justify-content: center;
+
+        @include md {
+            height: unset;
+        }
+
+        >svg {
+            height: 100%;
         }
     }
 
@@ -73,7 +92,11 @@ $header-extended-height: 55vh;
         flex-grow: 2;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 1em;
+        font-size: 20px;
+
+        @include md {
+            font-size: 14px;
+        }
 
         >.scroller-link {
             cursor: pointer;
@@ -123,6 +146,11 @@ $header-extended-height: 55vh;
             text-align: center;
             margin-bottom: 15px;
             border-bottom: 2px solid white;
+            font-size: 34px;
+
+            @include md {
+                font-size: 24px;
+            }
         }
 
         .link-container {
@@ -138,6 +166,10 @@ $header-extended-height: 55vh;
                 >span {
                     color: #ffffff;
                     font-size: 36px;
+
+                    @include md {
+                        font-size: 24px;
+                    }
                 }
             }
         }
@@ -160,28 +192,38 @@ $header-extended-height: 55vh;
             #adjusted-main {
                 margin-top: $header-extended-height;
                 padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
                 span {
                     display: block;
                     &#firstLine {
-                        font-size: 2em;
+                        font-size: 34px;
+                        @include sm {
+                            font-size: 24px;
+                        }
                         text-align: center;
                     }
                     &#secondLine {
-                        font-size: 1.5em;
+                        font-size: 24px;
+                        @include sm {
+                            font-size: 16px;
+                        }
                         text-align: center;
                         margin-right: 10px;
                     }
                     &#thirdLine {
-                        font-size: 1.5em;
+                        font-size: 24px;
+                        @include sm {
+                            font-size: 16px;
+                        }
                         text-align: center;
                     }
                 }
                 >#secondLineContainer {
                     display: flex;
                     flex-wrap: wrap;
-                    width: 80%;
-                    padding: 30px 0;
-                    margin: 0 auto;
+                    margin: 20px 0;
                     justify-content: center;
                 }
             }
@@ -209,8 +251,11 @@ $header-extended-height: 55vh;
                     border-radius: 20px;
                     width: 70%;
                     p {
-                        font-size: 1.2em;
+                        font-size: 16px;
                         line-height: 1.5;
+                        @include sm {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -226,8 +271,12 @@ $header-extended-height: 55vh;
             .experience-list-items {
                 .item-title {
                     font-weight: bold;
-                    font-size: 1.5em;
+                    font-size: 24px;
                     margin-bottom: 3px;
+
+                    @include md {
+                        font-size: 20px;
+                    }
                 }
                 .item-date {
                     font-size: 1em;
@@ -236,12 +285,17 @@ $header-extended-height: 55vh;
                     margin-bottom: 10px;
                 }
                 width: 70%;
-                font-size: 1em;
+                font-size: 16px;
                 line-height: 1.5;
                 padding: 20px 40px;
                 background-color: rgba(0,0,0,0.3);
                 border-radius: 20px;
                 margin-bottom: 30px;
+
+                @include md {
+                    font-size: 14px;
+                }
+
                 a {
                     color: #ffffff;
                     &.visited {
@@ -270,10 +324,13 @@ $header-extended-height: 55vh;
                 #download-text {
                     margin-right: 20px;
                     text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
+                    @include sm {
+                        display: none;
+                    }
                 }
                 #download-icon {
-                    height: 100px;
-                    width: 100px;
+                    height: 80px;
+                    width: 80px;
                     background-color: #7C0000;
                     border-radius: 50%;
                     display: block;
@@ -284,6 +341,12 @@ $header-extended-height: 55vh;
                     &:focus,
                     &:active {
                         background-color: #B90000;
+                    }
+
+                    @include md {
+                        height: 50px;
+                        width: 50px;
+                        font-size: 24px;
                     }
 
                     >.icon-wrapper {

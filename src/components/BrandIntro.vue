@@ -1,13 +1,18 @@
 <template>
-    <logo />
+    <logo :href="href" />
 </template>
 
 <script>
 import anime from 'animejs';
 export default {
+    props: {
+        href: {
+            type: String,
+            default: '',
+        },
+    },
     data() {
         return {
-
         };
     },
     mounted() {

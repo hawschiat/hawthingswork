@@ -9,16 +9,16 @@
                 Some of the things I did includes:<br>
                 • Designed UI components that are customizable for my teammates<br>
                 • Worked on the networking part of the game<br>
-                See the repository <a href="https://github.com/COMP361/f2018-group10" target="_blank">here</a>.
+                <strong>See the repository <a href="https://github.com/COMP361/f2018-group10" target="_blank">here</a>.</strong>
             </list-component>
             <list-component title="DoomsDayNEO" date="ConUHacks IV (2019)">
                 Created using Unity Engine, this tool visualizes the data of NEO (Near Earth Objects) from NASA’s API. It features an Earth model and asteroids that represents the NEO. When the user hovers over an asteroid, data fetched from NASA will show up as reference.<br>
-                See the repository <a href="https://github.com/hawschiat/conuhacks-2019" target="_blank">here</a>.
+                <strong>See the repository <a href="https://github.com/hawschiat/conuhacks-2019" target="_blank">here</a>.</strong>
             </list-component>
             <list-component title="Picture !t" date="Hack the North 2018">
                 <a href="https://devpost.com/software/t2v" target="_blank">See on Devpost</a><br>
                 We created this tool that visualizes an English sentence into an image. We used an API called Compromise JS to analyze the sentence. The API breaks down the semantic properties of the sentence so that we get the important details, such as nouns and prepositions. After that, relevant image parts are drawn from an image database. Combined with the position information (preposition), our script is able to “draw” out the described scenario.<br>
-                See the repository <a href="https://github.com/mtlghtn/t2v" target="_blank">here</a>.
+                <strong>See the repository <a href="https://github.com/mtlghtn/t2v" target="_blank">here</a>.</strong>
             </list-component>
         </div>
     </custom-section>
